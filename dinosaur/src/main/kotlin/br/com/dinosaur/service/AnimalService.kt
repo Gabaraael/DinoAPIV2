@@ -1,4 +1,17 @@
 package br.com.dinosaur.service
 
-class AnimalService {
+import br.com.dinosaur.model.AnimalEntity
+import br.com.dinosaur.repository.AnimalRepository
+import org.springframework.stereotype.Service
+
+@Service
+class AnimalService (private val animalRepository: AnimalRepository){
+
+    fun save(animalEntity: AnimalEntity){
+        animalRepository.save(animalEntity);
+    }
+
+    fun findAll(): Any{
+        return animalRepository.findAll();
+    }
 }

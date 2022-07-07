@@ -1,6 +1,19 @@
 package br.com.dinosaur.model
 
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
+import javax.persistence.Table
 
-class AnimalEntity (val Kingdom: String, val Suborder: String)
-{
+
+@Table(name = "animal")
+@Entity
+class AnimalEntity (
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        val id: Long,
+        val Kingdom: String,
+        val Suborder: String){
+
 }
