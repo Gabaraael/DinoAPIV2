@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service
 class AnimalService
 (
         private val animalRepository: AnimalRepository,
-        private val modelMapper: ModelMapper = ModelMapper()
+        private val modelMapper: ModelMapper
 )
 {
     fun save(animalDTO: AnimalDTO){
