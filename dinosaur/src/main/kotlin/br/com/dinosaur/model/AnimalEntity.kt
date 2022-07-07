@@ -12,8 +12,15 @@ import javax.persistence.Table
 class AnimalEntity (
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        val id: Long,
-        val Kingdom: String,
-        val Suborder: String){
+        val id: Long?,
+        val reino: String?,
+        val filo: String?,
+        val classe: String?,
+        val superordem: String?,
+        val ordem: String?,
+        val infraOrdem: String?,
+        val genero: String?
+){
+
 
 }

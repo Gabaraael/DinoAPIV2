@@ -13,7 +13,7 @@ class AnimalController (private val animalService: AnimalService){
 
     @PostMapping("/save")
     fun saveAnimal() {
-        animalService.save(AnimalEntity(0, "Animalia", "Theropody"))
+        animalService.save(AnimalEntity())
     }
 
     @GetMapping("/animal")

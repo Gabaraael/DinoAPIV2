@@ -5,13 +5,16 @@ import br.com.dinosaur.repository.AnimalRepository
 import org.springframework.stereotype.Service
 
 @Service
-class AnimalService (private val animalRepository: AnimalRepository){
-
+class AnimalService
+(
+        private val animalRepository: AnimalRepository
+)
+{
     fun save(animalEntity: AnimalEntity){
         animalRepository.save(animalEntity);
     }
 
-    fun findAll(): Any{
+    fun findAll(): List<AnimalEntity>{
         return animalRepository.findAll();
     }
 }
