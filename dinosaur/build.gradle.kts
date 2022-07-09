@@ -23,13 +23,13 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-<<<<<<< HEAD
 	developmentOnly("org.springframework.boot:spring-boot-devtgitools")
-=======
-// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
+	//https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
 	implementation("org.springdoc:springdoc-openapi-ui:1.6.9")
+	//https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+	implementation("org.modelmapper:modelmapper:3.1.0")
+
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
->>>>>>> main
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 

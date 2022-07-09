@@ -1,5 +1,6 @@
 package br.com.dinosaur.controller
 
+import br.com.dinosaur.dtos.AnimalDTO
 import br.com.dinosaur.model.AnimalEntity
 import br.com.dinosaur.service.AnimalService
 import org.springframework.web.bind.annotation.GetMapping
@@ -12,12 +13,13 @@ import org.springframework.web.bind.annotation.RestController
 class AnimalController (private val animalService: AnimalService){
 
     @PostMapping("/save")
-    fun saveAnimal() {
-        animalService.save(AnimalEntity())
+    fun saveAnimal(animalDTO: AnimalDTO) {
+        animalService.save(animalDTO)
     }
-
     @GetMapping("/animal")
     fun findByAnimal(): Any{
        return animalService.findAll();
     }
+
+
 }
