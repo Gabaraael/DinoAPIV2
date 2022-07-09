@@ -17,7 +17,6 @@ class AnimalService
     fun save(animalDTO: AnimalDTO){
         animalRepository.save(modelMapper.map(animalDTO, AnimalEntity::class.java))
     }
-
     fun findAll(): List<AnimalEntity>{
         return animalRepository.findAll();
     }

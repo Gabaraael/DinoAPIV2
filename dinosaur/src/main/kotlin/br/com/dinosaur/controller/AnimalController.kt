@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RestController
 class AnimalController (private val animalService: AnimalService){
 
     @PostMapping("/save")
-    fun saveAnimal() {
-        // animalService.save()
+    fun saveAnimal(animalDTO: AnimalDTO) {
+        animalService.save(animalDTO)
     }
-
     @GetMapping("/animal")
     fun findByAnimal(): Any{
        return animalService.findAll();
     }
+
+
 }
